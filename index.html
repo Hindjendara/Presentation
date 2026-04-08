@@ -10,7 +10,7 @@
    EIA BRAND SYSTEM
 ═══════════════════════════════════════════════ */
 :root {
-  --green:      #3ddc84;
+  --green:      #788C5D;
   --green-dark: #0d4314;
   --green-dim:  rgba(61,186,78,0.12);
   --green-mid:  rgba(61,186,78,0.25);
@@ -88,7 +88,7 @@ html, body { width: 100%; height: 100%; overflow: hidden; background: var(--whit
    NAVIGATION
 ═══════════════════════════════════════════════ */
 #nav {
-  position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%);
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
   display: flex; align-items: center; gap: 12px;
   background: rgba(255,255,255,0.92); border: 1px solid var(--gray-200);
   border-radius: 100px; padding: 8px 16px;
@@ -344,10 +344,9 @@ kbd {
 
 <div id="nav">
   <div id="part-tabs">
-    <button class="ptab active" onclick="goToSection(0)">Intro</button>
-    <button class="ptab" onclick="goToSection('A')">Part A</button>
-    <button class="ptab" onclick="goToSection('B')">Part B</button>
-    <button class="ptab" onclick="goToSection('C')">Part C</button>
+    <button class="ptab" onclick="goToSection('A')">A</button>
+    <button class="ptab" onclick="goToSection('B')">B</button>
+    <button class="ptab" onclick="goToSection('C')">C</button>
   </div>
   <div style="width:1px;height:20px;background:var(--gray-200)"></div>
   <button id="btn-prev" onclick="navigate(-1)">&#8592;</button>
@@ -451,7 +450,8 @@ const SLIDES = [
 { part: 'A', type: 'white', frags: 0, chartId: 'catChart', render: () => `
 <div class="s-header"><h2>Problem frequency by category — 1,182 classified responses</h2><span class="s-tag">Part A · What students complained about</span></div>
 <div class="s-body">
-  <div class="chart-wrap" style="height:300px"><canvas id="catChart"></canvas></div>
+  <div class="chart-wrap" style="height:300px; transform: scale(0.8); transform-origin: top left;">
+	  <canvas id="catChart"></canvas>
   <div style="display:flex;gap:20px;margin-top:10px;font-size:11px;color:var(--muted)">
     <span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;border-radius:2px;background:var(--green);display:inline-block"></span>2025 responses</span>
     <span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:12px;border-radius:2px;background:#4a7fe8;display:inline-block"></span>2022 responses (excl. EpiProdux 305 responses)</span>
